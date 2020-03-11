@@ -59,7 +59,6 @@ img {
     display: flex;
     height: auto;
     align-items: center;
-    background-color: var(--main-color);
 }
 
 header {
@@ -172,7 +171,6 @@ iframe {
 footer {
     line-height: 50px;
     text-align: center;
-    background-color: var(--main-color);
 }
 
 
