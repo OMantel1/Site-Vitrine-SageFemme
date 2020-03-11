@@ -55,10 +55,11 @@ img {
 /**************** = HEADER-BOX (Header + menu)****************/
 .header__box {
     width: 100%;
-    margin: 40px 0px;
+    margin: 0px 0px 40px 0px;
     display: flex;
     height: auto;
     align-items: center;
+    border: solid black 1px;;
 }
 
 header {
@@ -70,6 +71,8 @@ header {
 header h1 {
     border-bottom: #2d3436 1px solid;
     padding-bottom: 20px;
+    padding: 0px;
+    margin-bottom: 0px;
 }
 
 
