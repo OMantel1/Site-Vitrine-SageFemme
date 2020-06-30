@@ -1,4 +1,4 @@
-/**************** general ****************/
+/**************** = general ****************/
 
 body {
     margin: 0;
@@ -113,6 +113,7 @@ header p {
     animation: slide 600ms;
 }
 
+
 .menu__content {
     font-size: 13px;
     width: 100%;
@@ -139,6 +140,62 @@ header p {
     box-shadow: white 0px 0px 10px;
     padding: 10px;
 }
+
+/************** = HAMBURGER MENU **************/
+
+.toggler {
+    display: none;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.menuIcon {
+    display: none;
+    position: absolute;
+    top: 50px;
+    z-index: 0;
+    transform: rotate(90deg);
+    transition: 200ms ease-in-out;
+    animation: slide 1200ms;
+
+}
+.toggler, .menuIcon{
+    right: 8px;
+    top: 70px;
+}
+
+@media screen and (max-width: 375px) {
+
+    .toggler,
+    .menuIcon {
+        display: block;
+        border-radius: 100%;
+    }
+
+    .menu {
+        display: none;
+        justify-content: left;
+        margin-top: 20px;
+
+    }
+
+    .menu__content li {
+        border-bottom: solid white 1px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__box .toggler:checked~.menu {
+        display: block;
+    }
+
+    .header__box .toggler:checked + .menuIcon {
+        transform: rotate(0deg);
+    }
+}
+
 
 /****************************/
 
@@ -186,7 +243,7 @@ header p {
     justify-content: space-around;
 }
 
-/**************** = plan****************/
+/**************** = plan ****************/
 
 .iframe__box {
     text-align: center;
@@ -233,7 +290,7 @@ footer a {
     color: grey;
 }
 
-/**************** Animations ****************/
+/**************** = Animations ****************/
 
 @keyframes slide {
     0% {
@@ -247,7 +304,7 @@ footer a {
 
     100% {
         transform: scaleY(0px);
-       opacity: 1;
+        opacity: 1;
     }
 }
 
@@ -271,17 +328,6 @@ footer a {
     }
 }
 
-@media screen and (max-width: 375px) {
-    .menu__content {
-        flex-direction: column;
-    }
-
-    .menu__content li {
-        border-bottom: solid white 1px;
-        width: 100%;
-        text-align: center;
-    }
-}
 
 html {
     scroll-behavior: smooth;
