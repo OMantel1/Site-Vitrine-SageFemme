@@ -166,7 +166,7 @@ header p {
     top: 70px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
 
     .toggler,
     .menuIcon {
